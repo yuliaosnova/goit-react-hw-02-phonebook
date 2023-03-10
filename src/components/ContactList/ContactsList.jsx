@@ -1,12 +1,14 @@
 import React from 'react';
+import css from './ContactList.module.css';
 
-const ContactList = ( {data} ) => {
+const ContactList = ( {data, onDelete} ) => {
   return (
-      <ul>
+      <ul className={css.list}>
         {data.map(item => (
-          <li key={item.id}>
+          <li key={item.id} className={css.item}>
             <span className="name">{item.name}: </span>
             <span className="number">{item.number}</span>
+				<button className={css.btn} onClick={() => onDelete(item.id)}>{'\u00D7'}</button>
           </li>
         ))}
       </ul>
