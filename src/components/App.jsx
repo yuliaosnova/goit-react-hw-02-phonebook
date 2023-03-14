@@ -4,10 +4,11 @@ import Form from './Form/Form';
 import ContactList from './ContactList/ContactsList';
 import Filter from './Filter/Filter';
 import css from './App.module.css';
+import initialContacts from './assets/contacts'
 
 class App extends Component {
   state = {
-    contacts: [],
+    contacts: initialContacts,
     filter: '',
   };
 
